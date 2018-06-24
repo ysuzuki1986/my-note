@@ -1,0 +1,16 @@
+---
+- name: define uname -s 
+  shell: uname -s
+  register: uname_s
+
+- name: define uname -m
+  shell: uname -m
+  register: uname_m
+
+- name: download latest version of Docker Compose
+  shell: curl -L {{ docker_compose_url }}-{{ uname_s.stdout }}-{{ uname_m.stdout }} -o {{ docker_compose_dst }}
+
+- name: change permission of docker-compose
+  file: 
+    path: "{{ docker_compose_dst }}"
+    mode: 0755

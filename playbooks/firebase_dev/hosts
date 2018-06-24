@@ -1,0 +1,2 @@
+[firebase]
+localhost ansible_connection=local

@@ -1,0 +1,4 @@
+---
+
+docker_compose_url: "https://github.com/docker/compose/releases/download/1.21.2/docker-compose"
+docker_compose_dst: "/usr/local/bin/docker-compose"

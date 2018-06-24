@@ -1,0 +1,7 @@
+---
+- hosts: firebase
+  become: yes
+  roles: 
+    - common
+    - dockerinstall
+    - dockercomposeinstall

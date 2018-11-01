@@ -1,0 +1,6 @@
+@startuml
+title sequence diagram
+alice -> bob: request
+bob --> alice: response
+
+@enduml
